@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="end" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff0dc"/><stop offset=".4" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff4d12" stop-opacity="0"/></radialGradient>
+    <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".4" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".9"/></radialGradient>
+    <filter id="smoke" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".006 .012" numOctaves="4" seed="21"/><feColorMatrix values="0 0 0 0 .6  0 0 0 0 .58  0 0 0 0 .56  0 0 0 1.5 -.5"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="2"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 -.13"/></filter>
+    <filter id="b"><feGaussianBlur stdDeviation="8"/></filter>
+    <radialGradient id="pf" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+    <mask id="sm"><rect width="960" height="540" fill="#000"/><ellipse cx="480" cy="400" rx="380" ry="110" fill="url(#pf)"/></mask>
+  </defs>
+  <rect width="960" height="540" fill="#0b0b0c"/>
+  <!-- corridor walls in perspective -->
+  <polygon points="0,0 400,200 400,340 0,540" fill="#1a1a1c"/>
+  <polygon points="960,0 560,200 560,340 960,540" fill="#141416"/>
+  <polygon points="0,0 960,0 560,200 400,200" fill="#0e0e0f"/>
+  <polygon points="0,540 960,540 560,340 400,340" fill="#18181a"/>
+  <g stroke="#000" stroke-opacity=".6" stroke-width="2"><path d="M0 0L400 200M0 540L400 340M960 0L560 200M960 540L560 340M200 100V470M120 60V500M760 100V470M840 60V500M400 340L330 540M560 340L630 540"/></g>
+  <circle cx="480" cy="270" r="190" fill="url(#end)"/>
+  <rect x="400" y="200" width="160" height="140" fill="#fff4e3" opacity=".9"/>
+  <!-- silhouettes -->
+  <g fill="#050505">
+    <circle cx="452" cy="262" r="9"/><path d="M440 274Q452 268 464 274L466 330H438Z"/>
+    <circle cx="508" cy="266" r="8"/><path d="M497 277Q508 272 519 277L520 330H496Z"/>
+  </g>
+  <g mask="url(#sm)"><rect width="960" height="540" filter="url(#smoke)" opacity=".8"/></g>
+  <!-- muzzle streaks -->
+  <path d="M480 540L478 300" stroke="#ff7a2e" stroke-width="2" opacity=".5"/>
+  <!-- crosshair -->
+  <g stroke="#fff" stroke-width="2" opacity=".9"><path d="M480 245V262M480 278V295M455 270H472M488 270H505"/></g>
+  <circle cx="480" cy="270" r="2" fill="#ff5a1f"/>
+  <rect width="960" height="540" fill="url(#vig)"/>
+  <rect width="960" height="540" filter="url(#grain)" opacity=".5"/>
+  <g transform="translate(560 360) rotate(14) scale(.9)">
+<g id="ak">
+  <rect x="0" y="56" width="16" height="22" fill="#111"/>
+  <rect x="16" y="62" width="110" height="9" fill="#17171a"/>
+  <path d="M96 46h8v18h-8z" fill="#111"/>
+  <path d="M118 52h150v8H118z" fill="#141416"/>
+  <path d="M122 60h140l8 30H122z" fill="#4a3226"/>
+  <path d="M255 48h175v46H255z" fill="#17171a"/>
+  <path d="M300 92L346 92L340 130L316 168L276 178L292 130Z" fill="#101012"/>
+  <path d="M388 94h36l10 56-30 4z" fill="#3a271d"/>
+  <path d="M424 58L566 68L582 116L552 126L424 88Z" fill="#4a3226"/>
+  <path d="M340 94q10 24 40 22" fill="none" stroke="#101012" stroke-width="5"/>
+  <path d="M16 62H430M122 60H262M424 58L566 68" fill="none" stroke="#ff8a3d" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M255 48H430" fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2"/>
+</g>  </g>
+  <g><g transform="translate(870 64)"><rect x="-250" y="-18" width="250" height="28" fill="#000" fill-opacity=".55" stroke="#ff5a1f" stroke-opacity="1"/><text x="-12" y="2" text-anchor="end" font-family="'JetBrains Mono',Consolas,monospace" font-size="14" fill="#eee">VANTA <tspan fill="#ff8a3d">&#x25B8;</tspan> rush_b</text></g><g transform="translate(870 98)"><rect x="-250" y="-18" width="250" height="28" fill="#000" fill-opacity=".55" stroke="#ff5a1f" stroke-opacity=".8"/><text x="-12" y="2" text-anchor="end" font-family="'JetBrains Mono',Consolas,monospace" font-size="14" fill="#eee">VANTA <tspan fill="#ff8a3d">&#x25B8;</tspan> kzr</text></g><g transform="translate(870 132)"><rect x="-250" y="-18" width="250" height="28" fill="#000" fill-opacity=".55" stroke="#ff5a1f" stroke-opacity=".6"/><text x="-12" y="2" text-anchor="end" font-family="'JetBrains Mono',Consolas,monospace" font-size="14" fill="#eee">VANTA <tspan fill="#ff8a3d">&#x25B8;</tspan> ghost</text></g><g transform="translate(870 166)"><rect x="-250" y="-18" width="250" height="28" fill="#000" fill-opacity=".55" stroke="#ff5a1f" stroke-opacity=".4"/><text x="-12" y="2" text-anchor="end" font-family="'JetBrains Mono',Consolas,monospace" font-size="14" fill="#eee">VANTA <tspan fill="#ff8a3d">&#x25B8;</tspan> m1lk</text></g></g>
+  <g font-family="'Barlow Condensed',Impact,sans-serif" font-weight="700" fill="#fff">
+    <g transform="translate(90 450)"><text font-size="54" letter-spacing="1">23</text><text x="0" y="-52" font-size="16" fill="#aaa" font-family="'JetBrains Mono',monospace" font-weight="400">HP</text></g>
+    <g transform="translate(300 450)"><text font-size="54">12 / 90</text><text x="0" y="-52" font-size="16" fill="#aaa" font-family="'JetBrains Mono',monospace" font-weight="400">AMMO</text></g>
+  </g>
+<g font-family="'JetBrains Mono',monospace" font-size="13" fill="#ff8a3d" letter-spacing="3"><text x="480" y="54" text-anchor="middle">1 vs 4</text></g></svg>

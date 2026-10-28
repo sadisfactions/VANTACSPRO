@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a2e"/><stop offset="1" stop-color="#0c0c0d"/></linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd9ae"/><stop offset=".5" stop-color="#ff7a2e" stop-opacity=".6"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="9"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 -.13"/></filter>
+    <mask id="scope"><rect width="960" height="540" fill="#fff"/><circle cx="480" cy="270" r="250" fill="#000"/></mask>
+  </defs>
+  <rect width="960" height="540" fill="#050505"/>
+  <g>
+    <rect width="960" height="540" fill="url(#sky)"/>
+    <circle cx="700" cy="150" r="190" fill="url(#sun)"/>
+    <!-- distant structure -->
+    <path d="M0 360H180V250H330V300H430V210H560V290H700V230H860V330H960V540H0Z" fill="#141416"/>
+    <path d="M430 210H560V290H430Z" fill="#1c1c1f"/>
+    <rect x="455" y="320" width="48" height="90" fill="#ff8a3d" opacity=".85"/>
+    <g fill="#050505"><circle cx="479" cy="337" r="7"/><path d="M470 346Q479 342 488 346L490 392H468Z"/></g>
+    <path d="M0 410H960V540H0Z" fill="#0c0c0d"/>
+    <path d="M0 410H960" stroke="#ff5a1f" stroke-opacity=".4"/>
+  </g>
+  <!-- scope overlay -->
+  <rect width="960" height="540" fill="#000" mask="url(#scope)" opacity=".94"/>
+  <circle cx="480" cy="270" r="250" fill="none" stroke="#000" stroke-width="10"/>
+  <circle cx="480" cy="270" r="256" fill="none" stroke="#ff5a1f" stroke-opacity=".5" stroke-width="1.5"/>
+  <g stroke="#000" stroke-width="2"><path d="M230 270H460M500 270H730M480 20V250M480 290V520"/></g>
+  <g stroke="#000" stroke-width="7"><path d="M230 270H350M610 270H730M480 20V140M480 400V520"/></g>
+  <circle cx="480" cy="337" r="6" fill="none" stroke="#ff5a1f" stroke-width="2"/>
+  <g stroke="#000" stroke-width="1.5" opacity=".8"><path d="M440 262V278M420 266V274M520 262V278M540 266V274"/></g>
+  <rect width="960" height="540" filter="url(#grain)" opacity=".5"/>
+  <g transform="translate(870 64)"><rect x="-250" y="-18" width="250" height="28" fill="#000" fill-opacity=".55" stroke="#ff5a1f"/><text x="-12" y="2" text-anchor="end" font-family="'JetBrains Mono',Consolas,monospace" font-size="14" fill="#eee">VANTA <tspan fill="#ff8a3d">&#x25B8;</tspan> awp_main</text></g>
+  <g font-family="'Barlow Condensed',Impact,sans-serif" font-weight="700" fill="#fff">
+    <g transform="translate(90 450)"><text font-size="54" letter-spacing="1">100</text><text x="0" y="-52" font-size="16" fill="#aaa" font-family="'JetBrains Mono',monospace" font-weight="400">HP</text></g>
+    <g transform="translate(300 450)"><text font-size="54">1 / 10</text><text x="0" y="-52" font-size="16" fill="#aaa" font-family="'JetBrains Mono',monospace" font-weight="400">AMMO</text></g>
+  </g>
+</svg>

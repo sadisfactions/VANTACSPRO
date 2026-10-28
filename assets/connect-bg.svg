@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c0c0d"/><stop offset="1" stop-color="#1a1a1c"/></linearGradient>
+    <radialGradient id="lamp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd9ae" stop-opacity=".9"/><stop offset=".3" stop-color="#ff7a2e" stop-opacity=".45"/><stop offset="1" stop-color="#ff5a1f" stop-opacity="0"/></radialGradient>
+    <radialGradient id="pf" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+    <mask id="sm"><rect width="1920" height="1080" fill="#000"/><ellipse cx="900" cy="800" rx="900" ry="260" fill="url(#pf)"/><ellipse cx="1500" cy="500" rx="400" ry="240" fill="url(#pf)" opacity=".6"/></mask>
+    <filter id="smoke" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".004 .009" numOctaves="5" seed="14"/><feColorMatrix values="0 0 0 0 .62  0 0 0 0 .6  0 0 0 0 .58  0 0 0 1.6 -.4"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="8"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 -.12"/></filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#wall)"/>
+  <g stroke="#000" stroke-opacity=".5" stroke-width="3"><path d="M0 300H1920M0 600H1920M320 0V640M960 0V640M1600 0V640"/></g>
+  <text x="1180" y="560" font-family="'Barlow Condensed',Impact,sans-serif" font-weight="800" font-size="520" fill="none" stroke="#ff5a1f" stroke-opacity=".3" stroke-width="3">B</text>
+  <!-- hanging lamp -->
+  <rect x="1010" y="0" width="4" height="170" fill="#050505"/>
+  <path d="M960 190L1064 190L1040 150H984Z" fill="#050505"/>
+  <circle cx="1012" cy="210" r="360" fill="url(#lamp)"/>
+  <!-- container -->
+  <rect x="80" y="380" width="620" height="330" fill="#1b1b1d" stroke="#050505" stroke-width="5"/>
+  <g stroke="#050505" stroke-width="4"><path d="M160 380V710M240 380V710M320 380V710M400 380V710M480 380V710M560 380V710M640 380V710"/></g>
+  <rect x="80" y="380" width="620" height="14" fill="#ff5a1f" opacity=".45"/>
+  <!-- crates right -->
+  <rect x="1380" y="520" width="280" height="200" fill="#1e1e20" stroke="#050505" stroke-width="4"/><path d="M1380 520L1660 720M1660 520L1380 720" stroke="#050505" stroke-width="4"/>
+  <rect x="1660" y="600" width="200" height="120" fill="#161618" stroke="#050505" stroke-width="4"/>
+  <rect y="710" width="1920" height="370" fill="#0a0a0b"/>
+  <g stroke="#000" stroke-opacity=".6" stroke-width="2"><path d="M0 800H1920M0 920H1920M300 710L-200 1080M960 710V1080M1620 710L2100 1080"/></g>
+  <!-- C4 -->
+  <g transform="translate(960 880)"><rect x="-70" y="-26" width="140" height="52" fill="#16161a" stroke="#050505" stroke-width="3"/><rect x="-52" y="-14" width="68" height="20" fill="#1a0500"/><text x="-48" y="2" font-family="'JetBrains Mono',monospace" font-size="18" fill="#ff3b0a">0:07</text><circle cx="40" cy="-4" r="6" fill="#ff3b0a"/></g>
+  <ellipse cx="960" cy="900" rx="420" ry="50" fill="#ff5a1f" opacity=".12"/>
+  <g mask="url(#sm)"><rect width="1920" height="1080" filter="url(#smoke)" opacity=".8"/></g>
+  <rect width="1920" height="1080" filter="url(#grain)" opacity=".5"/>
+</svg>
